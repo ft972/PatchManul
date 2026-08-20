@@ -1,0 +1,150 @@
+<!--
+    **Die Grundfassung ist Englisch** (seit 1.8.0, 20.08.2026). Wer ein Gerät
+    auf Italienisch, Polnisch oder Japanisch stehen hat, bekommt diese Datei zu
+    sehen - vorher war das Deutsch, was ausserhalb des deutschen Sprachraums
+    niemandem hilft.
+
+    Deutsch liegt seither in `values-de`, Franzoesisch und Spanisch unveraendert
+    in `values-fr` und `values-es`.
+
+    **Die Texte des Info-Bildschirms stehen nicht hier**, sondern in
+    `strings_info.xml` - und die gibt es nur auf Englisch und Deutsch. Der Grund
+    steht dort.
+
+    Die Kommentare bleiben deutsch: Sie richten sich an den, der den Code
+    pflegt, nicht an den Nutzer.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">PatchManul</string>
+
+    <!-- Die farbige Statusmarkierung vor jedem Listeneintrag. -->
+    <string name="status_dot" translatable="false">●</string>
+
+    <string name="section_favorites">Favourites</string>
+    <string name="section_scan">Devices found</string>
+
+    <string name="favorites_empty">No favourites yet. Scan for devices and keep them, or add one by hand.</string>
+    <string name="add_favorite">Add by hand</string>
+    <string name="remove">Remove</string>
+    <string name="edit">Edit</string>
+    <string name="more_actions">More actions</string>
+    <string name="keep">Keep</string>
+    <!-- Kein Knopf, sondern der Hinweis am Ende der zweiten Zeile einer
+         Suchzeile — deshalb klein geschrieben. -->
+    <string name="kept">kept</string>
+
+    <string name="scan">Scan</string>
+    <string name="scan_running">Scanning…</string>
+    <string name="scan_progress">%1$s of %2$s addresses</string>
+    <string name="scan_hint">Not scanned yet.</string>
+    <string name="scan_no_network">No Wi-Fi — the phone has no IPv4 address on the local network.</string>
+    <!-- Kein plurals: Die Anzahl geprüfter Adressen ist immer dreistellig. -->
+    <string name="scan_result" tools:ignore="PluralsCandidate">Checked %1$s addresses in %2$s · %3$d found</string>
+
+    <string name="status_checking">checking…</string>
+    <string name="status_offline">not reachable</string>
+    <string name="status_online">reachable</string>
+
+    <string name="dialog_favorite_title">Favourite</string>
+    <string name="dialog_favorite_edit_title">Edit favourite</string>
+    <string name="dialog_name">Name</string>
+    <string name="dialog_address">IP address</string>
+    <string name="dialog_hostname">DNS name</string>
+    <string name="address_part_hint" translatable="false">000</string>
+    <string name="address_separator" translatable="false">.</string>
+    <!-- Achtung: gerade Anführungszeichen (U+0022) verschluckt Android in
+         Ressourcen. Hier stehen die typografischen Zeichen. -->
+    <string name="dialog_hint">The other route stays stored and steps in when the chosen one does not work — the app fills it in itself. Android does not resolve names ending in “.local”.</string>
+    <string name="name_suggestion">Device %1$s</string>
+    <string name="dialog_save">Save</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <!-- ── Über welches Merkmal ein Favorit angesprochen wird ── -->
+    <string name="dialog_route">Reachable via</string>
+    <string name="route_hint_auto">Chosen automatically — the app follows whatever actually answers.</string>
+    <string name="route_hint_locked">Set by you.</string>
+    <string name="warn_hostname_unresolved">The name could not be resolved just now. It has been saved anyway.</string>
+
+    <string name="error_address_empty">Please fill in all four fields.</string>
+    <string name="error_address_format">Each part must be a number from 0 to 255, without a leading zero.</string>
+    <string name="error_address_incomplete">Either fill in all four fields or leave them all empty.</string>
+    <string name="error_hostname_empty">Please enter a name — or switch to IP address.</string>
+    <string name="error_hostname_format">Letters, digits, hyphens and dots only.</string>
+    <!-- Android löst mDNS von sich aus nicht auf. Ein Favorit auf einen
+         .local-Namen wäre deshalb einer, der nie erreichbar wird. -->
+    <string name="error_hostname_mdns">Android does not resolve names ending in “.local”.</string>
+
+    <string name="remove_title">Remove favourite</string>
+    <string name="remove_message">Remove %1$s from the favourites?</string>
+
+    <string name="offline_title">Not reachable</string>
+    <string name="offline_message">No device answered at %1$s. It may have been given a different address.</string>
+    <string name="offline_recheck">Check again</string>
+
+    <string name="web_reload">Reload</string>
+    <string name="web_error">The page could not be loaded.</string>
+    <!-- web_back bleibt fuer den Zurueck-Knopf des Info- und
+         Lizenz-Bildschirms in Gebrauch. -->
+    <string name="web_back">Back</string>
+    <!-- Der Knopf oben links in der Webansicht: geht direkt zur Geraeteliste,
+         ohne durch den Seitenverlauf zu blaettern. -->
+    <string name="web_home">Home</string>
+
+    <string name="permission_denied">Without permission for the local network the scan finds nothing.</string>
+
+    <!-- ── Warnung vor einem großen Suchlauf ── -->
+    <string name="subnet_warning_title">Large network</string>
+    <!-- Die Zahl hinter dem Schrägstrich ist eine Präfixlänge, keine Anzahl —
+         ein plurals wäre hier sinnlos. -->
+    <string name="subnet_warning_message" tools:ignore="PluralsCandidate">This Wi-Fi is a /%1$d and covers %2$s addresses. A full scan takes about %3$s.\n\nThe scan can be limited to your own /24 range with %4$s addresses — that takes only seconds. Devices outside that range will not be found.</string>
+    <string name="subnet_warning_narrow">Scan /24 only</string>
+    <string name="subnet_warning_full">Scan everything</string>
+    <string name="subnet_too_large_message" tools:ignore="PluralsCandidate">This Wi-Fi is a /%1$d and is too large to scan completely. The scan is limited to your own /24 range with %2$s addresses. Devices outside it will not be found.</string>
+
+    <!-- Als plurals, weil die Schätzung auch bei einer Sekunde oder einer
+         Minute landen kann. -->
+    <plurals name="duration_seconds">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <string name="duration_hours">%1$s hours</string>
+
+    <!-- ── Einstellungen und Info ── -->
+    <string name="settings">Settings</string>
+    <string name="info">Info</string>
+
+    <string name="settings_interval_label">Check favourites automatically</string>
+    <string name="settings_interval_hint">Runs only while the app is open.</string>
+    <string name="settings_scan_timeout_label">Scan timeout</string>
+    <string name="settings_scan_timeout_hint">How long the scan waits for each address to answer. Higher values also find devices on slow networks, but the scan takes correspondingly longer.</string>
+    <string name="settings_theme_label">Theme</string>
+    <string name="settings_theme_hint">Applied immediately.</string>
+    <string name="settings_language_label">Language</string>
+    <string name="settings_language_hint">The app restarts after switching.</string>
+
+    <string name="interval_off">Off</string>
+    <string name="interval_15s">every 15 seconds</string>
+    <string name="interval_30s">every 30 seconds</string>
+    <string name="interval_60s">every minute</string>
+    <string name="interval_300s">every 5 minutes</string>
+
+    <string name="scan_timeout_value">%1$d ms</string>
+    <string name="scan_timeout_default">%1$d ms (default)</string>
+    <string name="scan_timeout_slow">%1$d ms (slow networks)</string>
+
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <!-- Die Sprachnamen stehen in ihrer eigenen Sprache und werden deshalb
+         nicht übersetzt. -->
+    <string name="language_system">System language</string>
+    <string name="language_de" translatable="false">Deutsch</string>
+    <string name="language_en" translatable="false">English</string>
+    <string name="language_fr" translatable="false">Français</string>
+    <string name="language_es" translatable="false">Español</string>
+</resources>

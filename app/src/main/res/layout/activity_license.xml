@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Der Apache-2.0-Lizenztext. Aufbau wie beim Info-Bildschirm: Kopfzeile mit
+    Zurueck-Knopf, darunter ein NestedScrollView.
+
+    **Der Text scrollt in beide Richtungen, und das ist noetig.** Er ist mit
+    fester Zeilenbreite gesetzt (rund 75 Zeichen) und lebt von seinen
+    Einrueckungen. Beim ersten Versuch stand er in einem gewoehnlichen TextView
+    und wurde umgebrochen - am Geraet zerriss das die Ueberschriften ("Apache"
+    in der einen, "License" in der naechsten Zeile) und schob die Einrueckungen
+    durcheinander. Mit dem HorizontalScrollView bleibt die Vorlage erhalten.
+
+    Der TextView steht darin auf wrap_content: So bekommt er keine Breite
+    vorgegeben und bricht nichts um.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LicenseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurfaceContainer"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/web_back"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/license_title"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/licenseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textIsSelectable="true"
+                android:textSize="11sp"
+                android:typeface="monospace"
+                tools:text="Apache License\nVersion 2.0, January 2004" />
+        </HorizontalScrollView>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

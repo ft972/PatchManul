@@ -1,0 +1,119 @@
+<!--
+    Deutsch. **War bis 1.7.2 die Grundfassung** und liegt seit 1.8.0 hier: Die
+    Grundfassung ist jetzt Englisch, damit ein Geraet mit einer nicht
+    mitgelieferten Sprache Englisch bekommt und nicht Deutsch.
+
+    Die nicht uebersetzbaren Eintraege (`app_name`, die Sprachnamen und
+    anderes) stehen weiterhin nur in `values` - sie hier zu wiederholen waere
+    ein Lint-Fehler.
+
+    Die Texte des Info-Bildschirms stehen in `strings_info.xml`.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="section_favorites">Favoriten</string>
+    <string name="section_scan">Gefundene Geräte</string>
+
+    <string name="favorites_empty">Noch keine Favoriten. Geräte suchen und übernehmen, oder von Hand hinzufügen.</string>
+    <string name="add_favorite">Von Hand hinzufügen</string>
+    <string name="remove">Entfernen</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="more_actions">Weitere Aktionen</string>
+    <string name="keep">Merken</string>
+    <string name="kept">gemerkt</string>
+
+    <string name="scan">Suchen</string>
+    <string name="scan_running">Suche läuft…</string>
+    <string name="scan_progress">%1$s von %2$s Adressen</string>
+    <string name="scan_hint">Noch nicht gesucht.</string>
+    <string name="scan_no_network">Kein WLAN — das Handy hat keine IPv4-Adresse im lokalen Netz.</string>
+    <string name="scan_result" tools:ignore="PluralsCandidate">%1$s Adressen in %2$s geprüft · %3$d gefunden</string>
+
+    <string name="status_checking">wird geprüft…</string>
+    <string name="status_offline">nicht erreichbar</string>
+    <string name="status_online">erreichbar</string>
+
+    <string name="dialog_favorite_title">Favorit</string>
+    <string name="dialog_favorite_edit_title">Favorit bearbeiten</string>
+    <string name="dialog_name">Name</string>
+    <string name="dialog_address">IP-Adresse</string>
+    <string name="dialog_hostname">DNS-Name</string>
+    <!-- Achtung: gerade Anführungszeichen (U+0022) verschluckt Android in
+         Ressourcen. Hier stehen die typografischen Zeichen U+201E und U+201C. -->
+    <string name="dialog_hint">Der jeweils andere Weg bleibt gespeichert und springt ein, wenn der gewählte einmal nicht trägt — die App trägt ihn selbst nach. Namen auf „.local“ löst Android nicht auf.</string>
+    <string name="name_suggestion">Gerät %1$s</string>
+    <string name="dialog_save">Speichern</string>
+    <string name="dialog_cancel">Abbrechen</string>
+
+    <!-- ── Über welches Merkmal ein Favorit angesprochen wird ── -->
+    <string name="dialog_route">Erreichbar über</string>
+    <string name="route_hint_auto">Automatisch gewählt — die App zieht nach, was tatsächlich antwortet.</string>
+    <string name="route_hint_locked">Von dir festgelegt.</string>
+    <string name="warn_hostname_unresolved">Der Name ließ sich gerade nicht auflösen. Gespeichert ist er trotzdem.</string>
+
+    <string name="error_address_empty">Bitte alle vier Felder ausfüllen.</string>
+    <string name="error_address_format">Jeder Teil muss eine Zahl von 0 bis 255 sein, ohne führende Null.</string>
+    <string name="error_address_incomplete">Entweder alle vier Felder ausfüllen oder alle leer lassen.</string>
+    <string name="error_hostname_empty">Bitte einen Namen eintragen — oder auf IP-Adresse umstellen.</string>
+    <string name="error_hostname_format">Erlaubt sind Buchstaben, Ziffern, Bindestriche und Punkte.</string>
+    <string name="error_hostname_mdns">Namen auf „.local“ löst Android nicht auf.</string>
+
+    <string name="remove_title">Favorit entfernen</string>
+    <string name="remove_message">%1$s aus den Favoriten entfernen?</string>
+
+    <string name="offline_title">Nicht erreichbar</string>
+    <string name="offline_message">Unter %1$s hat sich kein Gerät gemeldet. Möglicherweise hat es eine andere Adresse bekommen.</string>
+    <string name="offline_recheck">Erneut prüfen</string>
+
+    <string name="web_reload">Neu laden</string>
+    <string name="web_error">Die Seite konnte nicht geladen werden.</string>
+    <string name="web_back">Zurück</string>
+    <string name="web_home">Startseite</string>
+
+    <string name="permission_denied">Ohne die Berechtigung für das lokale Netz findet die Suche nichts.</string>
+
+    <!-- ── Warnung vor einem großen Suchlauf ── -->
+    <string name="subnet_warning_title">Großes Netz</string>
+    <string name="subnet_warning_message" tools:ignore="PluralsCandidate">Dieses WLAN ist auf /%1$d geschnitten und umfasst %2$s Adressen. Ein vollständiger Suchlauf dauert etwa %3$s.\n\nDie Suche kann sich auf den eigenen /24-Bereich mit %4$s Adressen beschränken — das dauert nur Sekunden. Geräte außerhalb dieses Bereichs werden dann nicht gefunden.</string>
+    <string name="subnet_warning_narrow">Nur /24 durchsuchen</string>
+    <string name="subnet_warning_full">Alles durchsuchen</string>
+    <string name="subnet_too_large_message" tools:ignore="PluralsCandidate">Dieses WLAN ist auf /%1$d geschnitten und damit zu groß, um es vollständig zu durchsuchen. Die Suche beschränkt sich auf den eigenen /24-Bereich mit %2$s Adressen. Geräte außerhalb werden nicht gefunden.</string>
+
+    <plurals name="duration_seconds">
+        <item quantity="one">%1$d Sekunde</item>
+        <item quantity="other">%1$d Sekunden</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="one">%1$d Minute</item>
+        <item quantity="other">%1$d Minuten</item>
+    </plurals>
+    <string name="duration_hours">%1$s Stunden</string>
+
+    <!-- ── Einstellungen und Info ── -->
+    <string name="settings">Einstellungen</string>
+    <string name="info">Info</string>
+
+    <string name="settings_interval_label">Favoriten automatisch prüfen</string>
+    <string name="settings_interval_hint">Läuft nur, solange die App offen ist.</string>
+    <string name="settings_scan_timeout_label">Zeitgrenze der Suche</string>
+    <string name="settings_scan_timeout_hint">Wie lange der Suchlauf je Adresse auf eine Antwort wartet. Höhere Werte finden Geräte auch in langsamen Netzen, der Lauf dauert dann entsprechend länger.</string>
+    <string name="settings_theme_label">Design</string>
+    <string name="settings_theme_hint">Wird sofort angewendet.</string>
+    <string name="settings_language_label">Sprache</string>
+    <string name="settings_language_hint">Die App startet nach dem Umschalten neu.</string>
+
+    <string name="interval_off">Aus</string>
+    <string name="interval_15s">alle 15 Sekunden</string>
+    <string name="interval_30s">alle 30 Sekunden</string>
+    <string name="interval_60s">jede Minute</string>
+    <string name="interval_300s">alle 5 Minuten</string>
+
+    <string name="scan_timeout_value">%1$d ms</string>
+    <string name="scan_timeout_default">%1$d ms (Vorgabe)</string>
+    <string name="scan_timeout_slow">%1$d ms (langsame Netze)</string>
+
+    <string name="theme_system">Systemdesign</string>
+    <string name="theme_light">Hell</string>
+    <string name="theme_dark">Dunkel</string>
+
+    <string name="language_system">Systemsprache</string>
+</resources>

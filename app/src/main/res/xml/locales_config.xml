@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Die Sprachen, die die App mitbringt. Ab Android 13 zeigt das System sie in
+    den App-Einstellungen an; die App selbst schaltet ueber
+    AppCompatDelegate.setApplicationLocales() um.
+
+    **Englisch ist seit 1.8.0 die Grundfassung** und liegt in res/values;
+    Deutsch steht in res/values-de. Ein Geraet, dessen Sprache hier nicht
+    aufgefuehrt ist, bekommt damit Englisch statt wie zuvor Deutsch.
+
+    Die Texte des Info-Bildschirms gibt es nur auf Englisch und Deutsch -
+    Franzoesisch und Spanisch fallen dort auf Englisch zurueck. Siehe
+    values/strings_info.xml.
+-->
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <locale android:name="de" />
+    <locale android:name="en" />
+    <locale android:name="fr" />
+    <locale android:name="es" />
+</locale-config>

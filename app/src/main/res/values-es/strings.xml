@@ -1,0 +1,117 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="section_favorites">Favoritos</string>
+    <string name="section_scan">Dispositivos encontrados</string>
+
+    <string name="favorites_empty">Aún no hay favoritos. Busca dispositivos y guárdalos, o añade uno a mano.</string>
+    <string name="add_favorite">Añadir a mano</string>
+    <string name="remove">Quitar</string>
+    <string name="edit">Editar</string>
+    <string name="more_actions">Más acciones</string>
+    <string name="keep">Guardar</string>
+    <string name="kept">guardado</string>
+
+    <string name="scan">Buscar</string>
+    <string name="scan_running">Buscando…</string>
+    <string name="scan_progress">%1$s de %2$s direcciones</string>
+    <string name="scan_hint">Todavía no se ha buscado.</string>
+    <string name="scan_no_network">Sin wifi — el teléfono no tiene dirección IPv4 en la red local.</string>
+    <!-- "resultado" statt "encontrados": So stimmt der Satz auch bei genau
+         einem gefundenen Gerät. -->
+    <string name="scan_result">%1$s direcciones comprobadas en %2$s · resultado: %3$d</string>
+
+    <string name="status_checking">comprobando…</string>
+    <string name="status_offline">no accesible</string>
+    <string name="status_online">accesible</string>
+
+    <string name="dialog_favorite_title">Favorito</string>
+    <string name="dialog_favorite_edit_title">Editar favorito</string>
+    <string name="dialog_name">Nombre</string>
+    <string name="dialog_address">Dirección IP</string>
+    <string name="dialog_hostname">Nombre DNS</string>
+    <string name="dialog_hint">La otra vía queda guardada y entra en juego si la elegida no funciona — la app la completa sola. Android no resuelve nombres con «.local».</string>
+    <string name="name_suggestion">Dispositivo %1$s</string>
+    <string name="dialog_save">Guardar</string>
+    <string name="dialog_cancel">Cancelar</string>
+
+    <string name="dialog_route">Accesible mediante</string>
+    <string name="route_hint_auto">Elegido automáticamente — la app sigue lo que responde de verdad.</string>
+    <string name="route_hint_locked">Definido por ti.</string>
+    <string name="warn_hostname_unresolved">El nombre no se pudo resolver ahora mismo. Se ha guardado igualmente.</string>
+
+    <string name="error_address_empty">Rellena los cuatro campos.</string>
+    <string name="error_address_format">Cada parte debe ser un número de 0 a 255, sin cero inicial.</string>
+    <string name="error_address_incomplete">Rellena los cuatro campos o déjalos todos vacíos.</string>
+    <string name="error_hostname_empty">Introduce un nombre — o cambia a dirección IP.</string>
+    <string name="error_hostname_format">Solo letras, dígitos, guiones y puntos.</string>
+    <string name="error_hostname_mdns">Android no resuelve nombres con «.local».</string>
+
+    <string name="remove_title">Quitar favorito</string>
+    <string name="remove_message">¿Quitar %1$s de los favoritos?</string>
+
+    <string name="offline_title">No accesible</string>
+    <string name="offline_message">Ningún dispositivo respondió en %1$s. Puede que haya recibido otra dirección.</string>
+    <string name="offline_recheck">Comprobar de nuevo</string>
+
+    <string name="web_reload">Recargar</string>
+    <string name="web_error">No se pudo cargar la página.</string>
+    <string name="web_back">Atrás</string>
+    <string name="web_home">Inicio</string>
+
+    <string name="permission_denied">Sin el permiso de red local la búsqueda no encuentra nada.</string>
+
+    <string name="subnet_warning_title">Red grande</string>
+    <string name="subnet_warning_message" tools:ignore="PluralsCandidate">Esta red wifi es una /%1$d y abarca %2$s direcciones. Una búsqueda completa dura unos %3$s.\n\nLa búsqueda puede limitarse a tu rango /24 con %4$s direcciones — eso solo tarda segundos. Los dispositivos fuera de ese rango no se encontrarán.</string>
+    <string name="subnet_warning_narrow">Buscar solo en /24</string>
+    <string name="subnet_warning_full">Buscar en todo</string>
+    <string name="subnet_too_large_message" tools:ignore="PluralsCandidate">Esta red wifi es una /%1$d y es demasiado grande para recorrerla entera. La búsqueda se limita a tu rango /24 con %2$s direcciones. Los dispositivos fuera de él no se encontrarán.</string>
+
+    <!-- Ohne "many": greift erst ab einer Million, siehe values-fr. -->
+    <plurals name="duration_seconds" tools:ignore="MissingQuantity">
+        <item quantity="one">%1$d segundo</item>
+        <item quantity="other">%1$d segundos</item>
+    </plurals>
+    <plurals name="duration_minutes" tools:ignore="MissingQuantity">
+        <item quantity="one">%1$d minuto</item>
+        <item quantity="other">%1$d minutos</item>
+    </plurals>
+    <string name="duration_hours">%1$s horas</string>
+
+    <string name="settings">Ajustes</string>
+    <string name="info">Info</string>
+
+    <string name="settings_interval_label">Comprobar favoritos automáticamente</string>
+    <string name="settings_interval_hint">Solo funciona mientras la aplicación está abierta.</string>
+    <string name="settings_scan_timeout_label">Tiempo de espera de la búsqueda</string>
+    <string name="settings_scan_timeout_hint">Cuánto espera la búsqueda la respuesta de cada dirección. Los valores más altos también encuentran dispositivos en redes lentas, pero la búsqueda tarda proporcionalmente más.</string>
+    <string name="settings_theme_label">Tema</string>
+    <string name="settings_theme_hint">Se aplica de inmediato.</string>
+    <string name="settings_language_label">Idioma</string>
+    <string name="settings_language_hint">La aplicación se reinicia tras el cambio.</string>
+
+    <string name="interval_off">Desactivado</string>
+    <string name="interval_15s">cada 15 segundos</string>
+    <string name="interval_30s">cada 30 segundos</string>
+    <string name="interval_60s">cada minuto</string>
+    <string name="interval_300s">cada 5 minutos</string>
+
+    <string name="scan_timeout_value">%1$d ms</string>
+    <string name="scan_timeout_default">%1$d ms (predeterminado)</string>
+    <string name="scan_timeout_slow">%1$d ms (redes lentas)</string>
+
+    <string name="theme_system">Tema del sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+
+    <string name="language_system">Idioma del sistema</string>
+
+    <!--
+        **Die Texte des Info-Bildschirms stehen hier nicht.** Sie enthalten
+        Lizenz-, Datenschutz- und Haftungsaussagen, und eine ungepruefte
+        Uebersetzung davon ist schlechter als gar keine - diese Sprache hat
+        niemand gegengelesen. Android greift dafuer auf die Grundfassung
+        zurueck, und die ist Englisch.
+
+        Wer sie doch uebersetzen will: values-es/strings_info.xml anlegen
+        und gegenlesen lassen. Siehe values/strings_info.xml.
+    -->
+</resources>

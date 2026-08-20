@@ -1,0 +1,44 @@
+<!--
+    Die Texte des Info-Bildschirms auf Deutsch. Das Gegenstueck steht in
+    `values/strings_info.xml` (Englisch) - **und mehr Sprachen gibt es hier
+    absichtlich nicht**, der Grund steht dort.
+
+    **Wer das Verhalten der App aendert, aendert diese Texte mit** - in beiden
+    Sprachen. Das gilt vor allem fuer den Datenschutz- und den Haftungsteil:
+    Beide beschreiben, was die App tut, und beide sind schon einmal unwahr
+    geworden, ohne dass es jemandem auffiel.
+-->
+<resources>
+
+    <string name="info_version">Version %1$s</string>
+
+    <string name="info_about_title">Über diese App</string>
+    <string name="info_about_body">PatchManul findet ESP32-S3-Pedal-Controller im WLAN und öffnet ihre Weboberfläche, damit man sich keine IP-Adressen merken muss. Sie zeigt an, was da ist — die Geräte steuert sie nicht.\n\nAuf den Geräten läuft Builty\'s Controller, ein eigenständiges quelloffenes Projekt. Diese App ist eine getrennte Ergänzung dazu: Sie gehört nicht zu jenem Projekt und ist von ihm auch nicht befürwortet.</string>
+
+    <string name="info_author_title">Urheber</string>
+
+    <string name="info_license_title">Lizenz</string>
+    <string name="info_license_body">Der Programmcode dieser App steht unter der MIT-0-Lizenz (MIT No Attribution). Er darf ohne Einschränkung genutzt, verändert und weitergegeben werden, auch gewerblich — ohne Namensnennung und ohne Rückfrage. Der Lizenztext liegt dem Quelltext als Datei LICENSE bei.\n\nDas betrifft den selbst geschriebenen Teil. Die mitgelieferten Bibliotheken stehen unter ihren eigenen Bedingungen — siehe unten.</string>
+
+    <string name="info_source_title">Quelltext</string>
+    <string name="info_source_body">Diese App ist quelloffen. Quelltext und fertige Fassungen stehen hier:</string>
+
+    <string name="info_privacy_title">Datenschutz</string>
+    <string name="info_privacy_body">Diese App sammelt keine Daten über dich und sendet nichts an Dritte.\n\n• Gespeichert werden ausschließlich die selbst angelegten Favoriten mit Name, IP-Adresse und — soweit bekannt — dem Namen aus dem DNS. Sie bleiben auf dem Gerät: Die App ist von der Datensicherung des Systems ausgenommen, ihre Daten wandern also auch nicht in ein Cloud-Backup. Der Preis dafür ist, dass die Favoriten bei einem Gerätewechsel neu anzulegen sind.\n• Netzwerkanfragen gehen nur an Adressen im lokalen Netz, um Geräte zu finden und ihre Erreichbarkeit zu prüfen.\n• Für die Namen der Geräte werden Anfragen an den DNS-Server gestellt, der im WLAN eingetragen ist — in aller Regel der Router selbst.\n• Es findet keine Nutzungsanalyse statt, es wird keine Werbung eingebunden, und es werden keine Absturzberichte übertragen.\n• Die Weboberfläche eines Geräts wird in einer WebView angezeigt. Was dort geschieht, bestimmt das Gerät, nicht diese App; dabei kann die WebView Daten der angezeigten Seite auf dem Gerät ablegen.</string>
+
+    <string name="info_permissions_title">Berechtigungen</string>
+    <string name="info_permissions_body">Die App fordert drei Berechtigungen an, alle für denselben Zweck — die Geräte im eigenen WLAN zu erreichen:\n\n• Netzwerkzugriff, um die Geräte abzufragen und ihre Weboberfläche anzuzeigen.\n• Zugriff auf den Netzwerkstatus, um die eigene Adresse und die Netzmaske zu lesen. Erst daraus ergibt sich, welcher Adressbereich zu durchsuchen ist.\n• Zugriff auf das lokale Netz. Ab Android 17 ist das eine eigene Berechtigung, nach der das System ausdrücklich fragt; ohne sie bleiben die Geräte unerreichbar.\n\nEine Standortberechtigung wird nicht verlangt.</string>
+
+    <string name="info_licenses_title">Verwendete Bibliotheken</string>
+    <string name="info_licenses_body">AndroidX und Material Components für Android\nApache License, Version 2.0\n\nDer vollständige Lizenztext liegt dieser App bei.</string>
+    <string name="info_licenses_show">Lizenztext anzeigen</string>
+
+    <string name="info_thanks_title">Dank</string>
+    <string name="info_thanks_body">Dank an Builty für die Controller-Firmware — großartige Arbeit, offen entwickelt und frei geteilt. Ohne sie hätte diese App nichts, worauf sie zeigen könnte. Das Projekt steht hier:</string>
+
+    <string name="info_trademarks_title">Marken</string>
+    <string name="info_trademarks_body">Produkt- und Firmennamen, die in den angezeigten Weboberflächen oder auf den von hier verlinkten Seiten vorkommen, sind Marken oder eingetragene Marken ihrer jeweiligen Inhaber. Aus ihrer Nennung folgt keine Verbindung zu ihnen.</string>
+
+    <string name="info_disclaimer_title">Haftung</string>
+    <string name="info_disclaimer_body">Diese App wird ohne jede Gewährleistung bereitgestellt. Es wird nicht zugesichert, dass sie fehlerfrei arbeitet oder sich für einen bestimmten Zweck eignet. Die Nutzung erfolgt auf eigene Gefahr.\n\nEine Haftung für Schäden aus der Nutzung ist ausgeschlossen, soweit das gesetzlich zulässig ist. Unberührt bleibt die Haftung für Vorsatz und grobe Fahrlässigkeit sowie bei der Verletzung von Leben, Körper oder Gesundheit.\n\nDie App findet Geräte im lokalen Netz und zeigt ihre Weboberflächen an. Sie steuert die Geräte nicht.\n\nWas über eine solche Weboberfläche ausgelöst wird — etwa das Ändern von Einstellungen oder das Aufspielen einer Firmware — verantworten das Gerät und seine Firmware, nicht diese App.</string>
+</resources>

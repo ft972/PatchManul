@@ -1,0 +1,68 @@
+<!--
+    **Die Texte des Info-Bildschirms - nur auf Englisch und Deutsch.**
+
+    Entschieden am 20.08.2026 (1.8.0). Hier stehen Lizenz-, Datenschutz- und
+    Haftungstexte, also Aussagen, die stimmen muessen. **Franzoesisch und
+    Spanisch hat niemand gegengelesen** - eine ungepruefte Uebersetzung eines
+    Haftungstextes ist schlechter als gar keine.
+
+    Deshalb gibt es diese Datei nur zweimal: hier (Englisch, die Grundfassung)
+    und in `values-de`. Wer sein Geraet auf Franzoesisch oder Spanisch stehen
+    hat, bekommt die Oberflaeche uebersetzt und **den Info-Bildschirm auf
+    Englisch** - Android greift dafuer von selbst auf diese Datei zurueck.
+
+    **Deshalb das `tools:ignore` am Wurzelelement:** Lint meldet sonst fuer
+    jeden dieser Texte eine fehlende Uebersetzung (`MissingTranslation`) und
+    verdeckt damit die echten Befunde. Die Ausnahme steht bewusst nur hier und
+    nicht in `strings.xml` - dort soll eine fehlende Uebersetzung weiterhin
+    auffallen.
+
+    **Wer eine Sprache ergaenzen will**, legt `values-<code>/strings_info.xml`
+    an - und laesst die Texte von jemandem gegenlesen, der die Sprache kann.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="info_version">Version %1$s</string>
+
+    <string name="info_about_title">About this app</string>
+    <string name="info_about_body">PatchManul finds ESP32-S3 pedal controllers on your Wi-Fi network and opens their web interface, so you do not have to remember IP addresses. It shows what is there — it does not control the devices.\n\nThe firmware on those devices is Builty\'s Controller, an open-source project of its own. This app is a separate companion to it: it is neither part of that project nor endorsed by it.</string>
+
+    <string name="info_author_title">Author</string>
+    <!-- Der Urheber tritt unter seinem GitHub-Namen auf; siehe LICENSE, wo
+         derselbe Name steht. -->
+    <string name="info_author_body" translatable="false">© 2026 ft972</string>
+
+    <string name="info_license_title">Licence</string>
+    <string name="info_license_body">The source code of this app is licensed under MIT-0 (MIT No Attribution). It may be used, modified and passed on without restriction, including commercially — without attribution and without asking. The licence text accompanies the source code as the file LICENSE.\n\nThat covers the part written for this app. The bundled libraries come under their own terms — see below.</string>
+
+    <string name="info_source_title">Source code</string>
+    <string name="info_source_body">This app is open source. The source code and ready-made releases are available here:</string>
+    <!-- Die Adresse selbst wird nicht uebersetzt. -->
+    <string name="info_source_url" translatable="false">https://github.com/ft972/PatchManul</string>
+
+    <string name="info_privacy_title">Privacy</string>
+    <string name="info_privacy_body">This app collects no data about you and sends nothing to third parties.\n\n• Only the favourites you create yourself are stored, with name, IP address and — where known — the name from DNS. They stay on the device: the app is excluded from the system backup, so its data does not end up in a cloud backup either. The price is that favourites have to be created again after changing devices.\n• Network requests go to addresses on the local network only, in order to find devices and check whether they are reachable.\n• To obtain device names, queries are sent to the DNS server configured on the Wi-Fi network — as a rule the router itself.\n• There is no usage analysis, no advertising is embedded, and no crash reports are transmitted.\n• A device\'s web interface is shown in a WebView. What happens there is up to the device, not to this app; in doing so, the WebView may store data from the page shown on the device.</string>
+
+    <string name="info_permissions_title">Permissions</string>
+    <string name="info_permissions_body">The app requests three permissions, all for the same purpose — reaching the devices on your own Wi-Fi network:\n\n• Network access, to query the devices and show their web interface.\n• Access to the network state, to read the device\'s own address and the netmask. Only from these does it follow which range of addresses has to be searched.\n• Access to the local network. From Android 17 on this is a separate permission the system asks about explicitly; without it the devices stay out of reach.\n\nNo location permission is required.</string>
+
+    <string name="info_licenses_title">Libraries used</string>
+    <string name="info_licenses_body">AndroidX and Material Components for Android\nApache License, Version 2.0\n\nThe full licence text is included with this app.</string>
+    <string name="info_licenses_show">Show licence text</string>
+    <string name="license_title" translatable="false">Apache License 2.0</string>
+
+    <string name="info_thanks_title">Thanks</string>
+    <string name="info_thanks_body">Thank you to Builty for the controller firmware — a great piece of work, developed in the open and shared freely. Without it this app would have nothing to point at. The project lives here:</string>
+    <!-- Die Adresse selbst wird nicht uebersetzt. Sie zeigt auf das
+         Benutzerprofil und nicht auf das Repository, dessen Name eine Marke
+         traegt - **dieselbe Adresse steht aus demselben Grund in der README**,
+         siehe die Namensregel in CLAUDE.md. Das Projekt steht auf jenem Profil
+         obenan. -->
+    <string name="info_thanks_url" translatable="false">https://github.com/Builty</string>
+
+    <string name="info_trademarks_title">Trademarks</string>
+    <string name="info_trademarks_body">Product and company names appearing in the web interfaces shown, or on the pages linked from here, are trademarks or registered trademarks of their respective owners. Their use implies no connection with them.</string>
+
+    <string name="info_disclaimer_title">Liability</string>
+    <string name="info_disclaimer_body">This app is provided without any warranty. There is no assurance that it works without faults or is fit for any particular purpose. Use is at your own risk.\n\nLiability for damage arising from its use is excluded as far as the law permits. This does not affect liability for intent and gross negligence, nor for injury to life, body or health.\n\nThe app finds devices on the local network and displays their web interfaces. It does not control the devices itself.\n\nWhat is triggered through such a web interface — changing settings or flashing a firmware, for instance — is the responsibility of the device and its firmware, not of this app.</string>
+</resources>

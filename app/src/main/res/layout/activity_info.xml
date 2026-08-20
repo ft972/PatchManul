@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurfaceContainer"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/web_back"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/info"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+
+            <TextView
+                android:id="@+id/versionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                tools:text="Version 1.0" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_about_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_about_body" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_author_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_author_body" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_license_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_license_body" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_source_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_source_body" />
+
+            <!--
+                Die Adresse steht in einer eigenen Zeile mit autoLink: So ist
+                sie antippbar, und der Fliesstext darueber bleibt frei von
+                Verlinkungen. autoLink faerbt nur das ein, was wirklich eine
+                Adresse ist.
+            -->
+            <TextView
+                style="@style/InfoBody"
+                android:autoLink="web"
+                android:text="@string/info_source_url"
+                android:textIsSelectable="true" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_privacy_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_privacy_body" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_permissions_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_permissions_body" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_licenses_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_licenses_body" />
+
+            <!--
+                Apache 2.0 verlangt bei Weitergabe eine Kopie der Lizenz. Der
+                Knopf fuehrt zu ihr; der Text selbst liegt als res/raw bei.
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/licenseButton"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/info_licenses_show" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_thanks_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_thanks_body" />
+
+            <!-- Wie beim Quelltext: eigene Zeile mit autoLink, damit die
+                 Adresse antippbar bleibt und der Fliesstext frei davon ist. -->
+            <TextView
+                style="@style/InfoBody"
+                android:autoLink="web"
+                android:text="@string/info_thanks_url"
+                android:textIsSelectable="true" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_trademarks_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_trademarks_body" />
+
+            <TextView
+                style="@style/InfoHeading"
+                android:text="@string/info_disclaimer_title" />
+
+            <TextView
+                style="@style/InfoBody"
+                android:text="@string/info_disclaimer_body" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

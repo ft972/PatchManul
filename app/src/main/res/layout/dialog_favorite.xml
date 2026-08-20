@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="24dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dialog_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--
+        Ueber welches Merkmal das Geraet angesprochen wird. Der nicht gewaehlte
+        Weg wird ausgegraut, aber **nicht entfernt**: Er bleibt als stiller
+        Rueckfall in Gebrauch, wenn der gewaehlte einmal nicht traegt.
+    -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_route"
+        android:textAppearance="?attr/textAppearanceTitleSmall" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/routeToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/routeAddress"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_address" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/routeHostname"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_hostname" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <TextView
+        android:id="@+id/routeHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?attr/textAppearanceBodySmall"
+        tools:text="Automatisch gewählt." />
+
+    <TextView
+        android:id="@+id/addressLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_address"
+        android:textAppearance="?attr/textAppearanceTitleSmall" />
+
+    <!--
+        Vier getrennte Felder statt eines einzelnen mit Formatierung: So laesst
+        sich die falsche Form gar nicht erst eintippen, und es gibt keine
+        Rechnerei mit Cursorpositionen, an der solche Masken sonst scheitern.
+    -->
+    <LinearLayout
+        android:id="@+id/addressRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:baselineAligned="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ip1"
+            style="@style/AddressPart"
+            android:imeOptions="actionNext"
+            tools:text="10" />
+
+        <TextView style="@style/AddressDot" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ip2"
+            style="@style/AddressPart"
+            android:imeOptions="actionNext"
+            tools:text="130" />
+
+        <TextView style="@style/AddressDot" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ip3"
+            style="@style/AddressPart"
+            android:imeOptions="actionNext"
+            tools:text="1" />
+
+        <TextView style="@style/AddressDot" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ip4"
+            style="@style/AddressPart"
+            android:imeOptions="actionDone"
+            tools:text="93" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/addressError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?attr/textAppearanceBodySmall"
+        android:textColor="?attr/colorError"
+        android:visibility="gone"
+        tools:text="Jeder Teil muss eine Zahl von 0 bis 255 sein."
+        tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hostnameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/dialog_hostname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hostnameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:maxLines="1"
+            tools:text="bruecke.fritz.box" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/hostnameError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?attr/textAppearanceBodySmall"
+        android:textColor="?attr/colorError"
+        android:visibility="gone"
+        tools:text="Dieser Name ist keine gültige Form."
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/dialog_hint"
+        android:textAppearance="?attr/textAppearanceBodySmall" />
+
+</LinearLayout>

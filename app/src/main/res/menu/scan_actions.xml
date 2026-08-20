@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Das Menü hinter dem Drei-Punkte-Symbol einer Suchzeile.
+
+    Es hat nur einen Punkt, und das ist Absicht: Ein Knopf in der Zeile
+    bräuchte Platz, den sie nicht hat, und beide Listen werden so gleich
+    bedient. Ist ein Gerät schon gemerkt, steht das in der zweiten Zeile —
+    dann erscheint das Symbol gar nicht erst.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_keep"
+        android:title="@string/keep" />
+
+</menu>

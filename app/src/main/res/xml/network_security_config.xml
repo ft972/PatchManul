@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Seit Android 9 (API 28) blockiert die Plattform unverschluesselte
+    HTTP-Verbindungen. Die Geraete fahren einen Webserver auf Port 80
+    ohne TLS, also muss Klartext erlaubt werden.
+
+    Warum pauschal statt gezielt: Eine domain-config nimmt nur konkrete
+    Hostnamen oder einzelne IP-Adressen an, keine Adressbereiche. Die
+    Adresse eines Geraets wechselt mit dem DHCP-Lease, und der Suchlauf
+    probiert ohnehin ein ganzes Subnetz durch. Eine Liste fester
+    Eintraege waere hier also nicht eng, sondern kaputt.
+-->
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <!-- Lint warnt hier zu Recht, aber die Warnung geht an dieser Stelle ins
+         Leere: Die Geraete koennen kein TLS, und ohne Klartext waere die App
+         funktionslos. Stummgeschaltet, damit die Meldung nicht bei jedem Lauf
+         die echten Befunde zudeckt. -->
+    <base-config
+        cleartextTrafficPermitted="true"
+        tools:ignore="InsecureBaseConfiguration" />
+</network-security-config>
