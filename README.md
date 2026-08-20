@@ -88,6 +88,8 @@ nothing to point at.
 This app is a separate project. It is not part of that one, contains none of its
 code, and is not endorsed by it.
 
+PatchManul itself was written with [Claude Code][claude-code].
+
 ## Licence
 
 MIT-0 (MIT No Attribution) — see [LICENSE](LICENSE). Use, modify and redistribute
@@ -197,6 +199,8 @@ zeigen könnte.
 Diese App ist ein eigenes Projekt. Sie gehört nicht zu jenem, enthält keinen
 seiner Quelltexte und ist von ihm auch nicht befürwortet.
 
+Geschrieben wurde PatchManul mit [Claude Code][claude-code].
+
 ## Lizenz
 
 MIT-0 (MIT No Attribution) — siehe [LICENSE](LICENSE). Nutzen, ändern und
@@ -214,3 +218,4 @@ hier verlinkten Seiten vorkommen, sind Marken oder eingetragene Marken ihrer
 jeweiligen Inhaber. Aus ihrer Nennung folgt keine Verbindung zu ihnen.
 
 [controller]: https://github.com/Builty/
+[claude-code]: https://claude.com/claude-code
